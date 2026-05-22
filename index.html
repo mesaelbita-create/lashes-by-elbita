@@ -3,69 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lashes by Elbita</title>
+<title>Lashes By Elbita</title>
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
 font-family:Arial,sans-serif;
-background:black;
 color:white;
-text-align:center;
 overflow-x:hidden;
+text-align:center;
 }
 
 .hero{
-padding:40px 20px;
+padding:40px 20px 20px;
 }
 
 .logo{
-width:220px;
+width:210px;
+height:210px;
+object-fit:cover;
 border-radius:50%;
 margin-bottom:25px;
 }
 
 h1{
-font-size:78px;
-font-family:Georgia, serif;
+font-family:Georgia,serif;
+font-size:88px;
 font-weight:normal;
+line-height:0.95;
 letter-spacing:10px;
-line-height:1;
 background:linear-gradient(to bottom,#fff6cc,#ffd700,#b8860b);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-text-shadow:0 0 18px rgba(255,215,0,0.6);
-margin:10px 0;
+text-shadow:
+0 0 8px rgba(255,215,0,0.8),
+0 0 18px rgba(255,215,0,0.6),
+0 0 28px rgba(255,215,0,0.3);
+margin-bottom:30px;
+}
+
+.by{
+font-size:42px;
+letter-spacing:8px;
+display:block;
+margin:8px 0;
 }
 
 .subtitle{
-font-size:20px;
+font-size:18px;
 margin-top:25px;
-color:white;
+margin-bottom:12px;
 }
 
 .special{
-font-size:18px;
-margin-top:10px;
-margin-bottom:35px;
+font-size:17px;
+margin-bottom:38px;
 }
 
 .button{
 display:inline-flex;
 align-items:center;
-gap:15px;
-background:linear-gradient(45deg,#ffd700,#ffea70);
+justify-content:center;
+gap:14px;
+background:linear-gradient(45deg,#f6d365,#fda085);
+background:linear-gradient(45deg,#ffd700,#ffef8a);
 color:black;
-padding:20px 45px;
+padding:20px 38px;
 border-radius:60px;
-text-decoration:none;
-font-weight:bold;
 font-size:20px;
-box-shadow:0 0 25px rgba(255,215,0,0.4);
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 22px rgba(255,215,0,0.45);
 transition:0.3s;
 }
 
@@ -73,11 +91,15 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+.button i{
+font-size:30px;
+}
+
 .features{
-margin-top:50px;
+margin-top:55px;
 display:flex;
 flex-direction:column;
-gap:22px;
+gap:28px;
 align-items:center;
 }
 
@@ -85,97 +107,124 @@ align-items:center;
 display:flex;
 align-items:center;
 gap:18px;
-font-size:18px;
+font-size:20px;
 }
 
 .check{
-width:38px;
-height:38px;
-border:2px solid gold;
+width:42px;
+height:42px;
+border:2px solid #d4af37;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-color:gold;
-font-size:18px;
+color:#d4af37;
+font-size:20px;
 }
 
-.section-title{
-margin-top:70px;
-margin-bottom:35px;
+.services-title{
+margin-top:75px;
+margin-bottom:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+font-family:Georgia,serif;
 font-size:42px;
-font-family:Georgia, serif;
 letter-spacing:5px;
-color:#f5d067;
+color:#d4af37;
+}
+
+.services-title::before,
+.services-title::after{
+content:"";
+width:110px;
+height:1px;
+background:#d4af37;
+display:block;
 }
 
 .cards{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:18px;
 flex-wrap:wrap;
-padding:0 20px 60px;
+padding:0 18px 60px;
 }
 
 .card{
-width:220px;
-border:1px solid rgba(255,215,0,0.5);
+width:210px;
+padding:28px 18px;
 border-radius:28px;
-padding:30px 20px;
-background:rgba(255,215,0,0.03);
-box-shadow:0 0 20px rgba(255,215,0,0.08);
+border:1px solid rgba(212,175,55,0.6);
+background:rgba(255,215,0,0.02);
+box-shadow:0 0 20px rgba(255,215,0,0.05);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 30px gold;
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(255,215,0,0.25);
 }
 
 .card img{
-width:95px;
-margin-bottom:15px;
+width:100px;
+margin-bottom:18px;
 }
 
 .card h3{
-font-family:Georgia, serif;
-font-size:28px;
-color:white;
-margin-bottom:10px;
+font-family:Georgia,serif;
+font-size:22px;
+font-weight:normal;
+margin-bottom:12px;
 }
 
 .card p{
+font-size:17px;
 color:#ddd;
-font-size:16px;
+margin-bottom:20px;
 }
 
 .price{
-margin-top:20px;
-font-size:42px;
-color:#f5c542;
-font-family:Georgia, serif;
+font-size:44px;
+font-family:Georgia,serif;
+color:#d4af37;
 }
 
 footer{
-padding:30px;
+padding:25px;
 font-size:18px;
-color:#ccc;
+color:#bbb;
 }
 
 @media(max-width:768px){
 
 h1{
-font-size:58px;
+font-size:72px;
 letter-spacing:6px;
+}
+
+.by{
+font-size:34px;
 }
 
 .logo{
 width:180px;
+height:180px;
 }
 
 .card{
 width:100%;
-max-width:280px;
+max-width:300px;
+}
+
+.services-title{
+font-size:34px;
+}
+
+.services-title::before,
+.services-title::after{
+width:70px;
 }
 
 }
@@ -191,8 +240,8 @@ max-width:280px;
 class="logo">
 
 <h1>
-LASHES<br>
-BY<br>
+LASHES
+<span class="by">BY</span>
 ELBITA
 </h1>
 
@@ -236,7 +285,7 @@ Reserve on WhatsApp
 
 </div>
 
-<div class="section-title">
+<div class="services-title">
 SERVICES
 </div>
 
@@ -244,9 +293,9 @@ SERVICES
 
 <div class="card">
 
-<img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png">
+<img src="https://cdn-icons-png.flaticon.com/512/346/346167.png">
 
-<h3>Classic Lashes</h3>
+<h3>CLASSIC LASHES</h3>
 
 <p>Soft elegant look</p>
 
@@ -256,9 +305,9 @@ SERVICES
 
 <div class="card">
 
-<img src="https://cdn-icons-png.flaticon.com/512/2922/2922688.png">
+<img src="https://cdn-icons-png.flaticon.com/512/346/346185.png">
 
-<h3>Hybrid Lashes</h3>
+<h3>HYBRID LASHES</h3>
 
 <p>Soft glam style</p>
 
@@ -268,9 +317,9 @@ SERVICES
 
 <div class="card">
 
-<img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png">
+<img src="https://cdn-icons-png.flaticon.com/512/346/346157.png">
 
-<h3>Volume Lashes</h3>
+<h3>VOLUME LASHES</h3>
 
 <p>Luxury glam lashes</p>
 
