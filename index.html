@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lashes by Elbita</title>
 <style>
-body{margin:0;background:black;color:white;font-family:Arial;text-align:center}
+<body style="background:linear-gradient(to bottom,#000,#111,#000);overflow-x:hidden;">
 .hero{padding:60px 20px}
 .logo{width:220px;height:220px;border-radius:50%;border:4px solid gold;object-fit:cover}
 h1{font-size:60px;color:gold;letter-spacing:8px}
@@ -15,16 +15,69 @@ h1{font-size:60px;color:gold;letter-spacing:8px}
 .cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
 .card{background:#111;padding:25px;border-radius:20px;max-width:280px;border:1px solid rgba(255,215,0,.3)}
 .price{color:gold;font-size:28px}
-</style>
+@keyframes glow{
+from{
+text-shadow:0 0 10px gold;
+}
+to{
+text-shadow:0 0 35px gold;
+}
+}
+
+.card{
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 25px gold;
+}
+
+.button{
+background:gold;
+color:black;
+font-weight:bold;
+border-radius:50px;
+transition:0.3s;
+}
+
+.button:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px gold;
+}
 </head>
 <body>
 
 <div class="hero">
 <img src="4586C436-8187-454C-88D4-A1D3AE2B430F.png" class="logo">
-<h1>LASHES</h1>
+<h1 style="font-size:72px;
+text-shadow:0 0 25px gold;
+animation: glow 2s infinite alternate;">
+
+
+
+LASHES BY ELBITA
+</h1>
+
+
+
 <p>Luxury Lash Experience ✨</p>
 <p>Grand Opening Specials Available</p>
+
 <a class="button" href="https://wa.me/17134717812">Reserve on WhatsApp</a>
+
+
+
+
+
+<div style="margin-top:60px">
+<h2 style="color:gold">Why Choose Us ✨</h2>
+
+<p>✔ Luxury lash experience</p>
+<p>✔ Premium products</p>
+<p>✔ Soft & fluffy lashes</p>
+<p>✔ Long lasting retention</p>
+</div>
 </div>
 
 <div class="section">
